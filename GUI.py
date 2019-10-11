@@ -7,8 +7,17 @@ def gui():
     rock = 1
     paper = 2
     scissor = 3
-    names = {rock: "Rock", paper: "Paper", scissor: "Scissor"}
-    rules = {rock: scissor, paper: rock, scissor: paper}
+    names = {
+        rock: "Rock",
+        paper: "Paper",
+        scissor: "Scissor"
+    }
+
+    rules = {
+        rock: scissor,
+        paper: rock,
+        scissor: paper
+    }
 
     def start():
         while game():
@@ -48,8 +57,19 @@ def gui():
     player_score = IntVar()
     computer_score = IntVar()
 
-    rps_frame = Frame(main_window, padx=5, pady=13, width=300)
-    rps_frame.grid(column=0, row=0, sticky=(N, W, E, S))
+    rps_frame = Frame(
+        main_window,
+        padx=5,
+        pady=13,
+        width=300
+    )
+
+    rps_frame.grid(
+        column=0,
+        row=0,
+        sticky=(N, W, E, S)
+    )
+
     rps_frame.columnconfigure(0, weight=1)
     rps_frame.rowconfigure(0, weight=1)
 
